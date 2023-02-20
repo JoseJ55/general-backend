@@ -1,6 +1,10 @@
 const Sequelize = require('sequelize');
 const db = require('../config/connection');
 
+const Partnerships = require('./Partnerships');
+const Address = require('./Address');
+const Products = require('./Products');
+
 const Manufactures = db.define(
     'manufactures', 
     {
@@ -25,5 +29,9 @@ const Manufactures = db.define(
         modelName: 'manufactures'
     }
 )
+
+Manufactures.hasMany(Partnerships, { foreignKey: 'manufacture_id' });
+Manufactures.hasMany(Products, { foreignKey: 'manufacture_id' });
+Manufactures.hasOne(Address, { foreignKey: 'address_id' });
 
 module.exports = Manufactures;

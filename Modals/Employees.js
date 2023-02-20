@@ -1,5 +1,8 @@
 const Sequelize = require('sequelize');
 const db = require('../config/connection');
+const Address = require('./Address');
+
+const Merchants = require('./Merchants');
 
 const Employees = db.define(
     'employees', 
@@ -28,7 +31,11 @@ const Employees = db.define(
         },
         merchant_id: {
             type: Sequelize.STRING,
-            allowNull: false,
+            allowNull: false
+        },
+        address_id: {
+            type: Sequelize.STRING,
+            allowNull: false
         }
     }, 
     {
@@ -37,5 +44,8 @@ const Employees = db.define(
         modelName: 'employees'
     }
 )
+
+Employees.belongsTo(Merchants, { foreignKey: 'merchant_id'});
+Employees.hasOne(Address, { foreignKey: 'address_id' });
 
 module.exports = Employees;

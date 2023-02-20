@@ -1,6 +1,9 @@
 const Sequelize = require('sequelize');
 const db = require('../config/connection');
 
+const Merchants = require('./Merchants');
+const Manufacture = require('./Manufactures');
+
 const Partnerships = db.define(
     'partnerships', 
     {
@@ -14,7 +17,7 @@ const Partnerships = db.define(
             type: Sequelize.STRING,
             allowNull: false,
         },
-        company_id: {
+        manufacture_id: {
             type: Sequelize.STRING,
             allowNull: false,
         }
@@ -25,5 +28,8 @@ const Partnerships = db.define(
         modelName: 'partnerships'
     }
 )
+
+Partnerships.belongsToMany(Merchants, { foreignKey: 'merchant_id' });
+Partnerships.belongsToMany(Manufacture, { foreignKey: 'manufacture_id' });
 
 module.exports = Partnerships;

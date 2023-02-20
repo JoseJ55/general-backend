@@ -1,6 +1,11 @@
 const Sequelize = require('sequelize');
 const db = require('../config/connection');
 
+const Customers = require('./Customers');
+const Employees = require('./Employees');
+const Manufacture = require('./Manufactures');
+const Merchants = require('./Merchants');
+
 const Address = db.define(
     'address', 
     {
@@ -41,5 +46,10 @@ const Address = db.define(
         modelName: 'address'
     }
 )
+
+Address.belongsToMany(Customers, { foreignKey: 'address_id' });
+Address.belongsToMany(Manufacture, { foreignKey: 'address_id' });
+Address.belongsToMany(Merchants, { foreignKey: 'address_id' });
+Address.belongsToMany(Employees, { foreignKey: 'address_id' });
 
 module.exports = Address;

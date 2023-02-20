@@ -1,6 +1,10 @@
 const Sequelize = require('sequelize');
 const db = require('../config/connection');
 
+const Merchants = require('./Merchants');
+const Manufacture = require('./Manufactures');
+const Categories = require('./Categories');
+
 const Products = db.define(
     'products', 
     {
@@ -46,9 +50,10 @@ const Products = db.define(
     }
 )
 
-Products.associate = (models) => {
-    Products.belongsTo(models.Merchants, { foreignKey: 'merchant_id' });
-    Products.belongsTo(models.Manufacture, { foreignKey: 'manufacture_id' });
-}
+// Products.associate = (models) => {
+    Products.belongsTo(Merchants, { foreignKey: 'merchant_id' });
+    Products.belongsTo(Manufacture, { foreignKey: 'manufacture_id' });
+    Products.hasOne(Categories, { foreignKey: 'category_id' });
+// }
 
 module.exports = Products;

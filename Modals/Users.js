@@ -6,19 +6,25 @@ const Users = db.define(
     {
         user_id: {
             type: Sequelize.STRING,
-            primaryKey: true
+            primaryKey: true,
+            allowNull: false,
+            unique: true
         },
         first_name: {
-            type: Sequelize.STRING
+            type: Sequelize.STRING,
+            allowNull: false
         },
         last_name: {
-            type: Sequelize.STRING
+            type: Sequelize.STRING,
+            allowNull: false,
         },
         email: {
-            type: Sequelize.STRING
+            type: Sequelize.STRING,
+            allowNull: false,
         }, 
         username: {
-            type: Sequelize.STRING
+            type: Sequelize.STRING,
+            allowNull: false,
         }
     }, 
     {

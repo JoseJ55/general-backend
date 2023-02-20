@@ -1,10 +1,12 @@
 const Sequelize = require('sequelize');
 const db = require('../config/connection');
 
+const Address = require('./Address');
+
 const Customers = db.define(
     'customers', 
     {
-        user_id: {
+        customers_id: {
             type: Sequelize.STRING,
             primaryKey: true,
             allowNull: false,
@@ -25,6 +27,10 @@ const Customers = db.define(
         username: {
             type: Sequelize.STRING,
             allowNull: false,
+        },
+        address_id: {
+            type: Sequelize.STRING,
+            allowNull: false,
         }
     }, 
     {
@@ -33,5 +39,7 @@ const Customers = db.define(
         modelName: 'customers'
     }
 )
+
+Customers.hasOne(Address, { foreignKey: 'address_id' });
 
 module.exports = Customers;
