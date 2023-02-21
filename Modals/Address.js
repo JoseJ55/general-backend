@@ -34,10 +34,6 @@ const Address = db.define(
         zip: {
             type: Sequelize.INTEGER,
             allowNull: false,
-        },
-        user_id: {
-            type: Sequelize.STRING,
-            allowNull: false,
         }
     }, 
     {
@@ -47,9 +43,9 @@ const Address = db.define(
     }
 )
 
-Address.belongsToMany(Customers, { foreignKey: 'address_id' });
-Address.belongsToMany(Manufacture, { foreignKey: 'address_id' });
-Address.belongsToMany(Merchants, { foreignKey: 'address_id' });
-Address.belongsToMany(Employees, { foreignKey: 'address_id' });
+// Address.belongsToMany(Customers, { foreignKey: 'address_id' });
+// Address.belongsToMany(Manufacture, { foreignKey: 'address_id' });
+// Address.belongsToMany(Merchants, { foreignKey: 'address_id' });
+// Address.belongsToMany(Employees, { foreignKey: 'address_id' });
 
 module.exports = Address;

@@ -45,7 +45,7 @@ const Employees = db.define(
     }
 )
 
-Employees.belongsTo(Merchants, { foreignKey: 'merchant_id'});
-Employees.hasOne(Address, { foreignKey: 'address_id' });
+// Employees.belongsTo(Merchants, { foreignKey: 'merchant_id'});
+// Employees.hasOne(Address, { foreignKey: 'address_id' });
 
 module.exports = Employees;

@@ -24,6 +24,6 @@ const Categories = db.define(
     }
 )
 
-Categories.belongsToMany(Products, { foreignKey: 'category_id' });
+// Categories.belongsToMany(Products, { foreignKey: 'category_id' });
 
 module.exports = Categories;

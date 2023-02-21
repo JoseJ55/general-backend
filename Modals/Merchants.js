@@ -31,9 +31,9 @@ const Merchants = db.define(
     }
 )
 
-Merchants.hasMany(Partnerships, { foreignKey: 'merchant_id' });
-Merchants.hasMany(Products, { foreignKey: 'merchant_id' });
-Merchants.hasOne(Address, { foreignKey: 'address_id' });
-Merchants.hasMany(Employees, { foreignKey: 'merchant_id'});
+// Merchants.hasMany(Partnerships, { foreignKey: 'merchant_id' });
+// Merchants.hasMany(Products, { foreignKey: 'merchant_id' });
+// Merchants.hasOne(Address, { foreignKey: 'address_id' });
+// Merchants.hasMany(Employees, { foreignKey: 'merchant_id'});
 
 module.exports = Merchants;

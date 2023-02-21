@@ -29,7 +29,7 @@ const Partnerships = db.define(
     }
 )
 
-Partnerships.belongsToMany(Merchants, { foreignKey: 'merchant_id' });
-Partnerships.belongsToMany(Manufacture, { foreignKey: 'manufacture_id' });
+// Partnerships.belongsToMany(Merchants, { foreignKey: 'merchant_id' });
+// Partnerships.belongsToMany(Manufacture, { foreignKey: 'manufacture_id' });
 
 module.exports = Partnerships;

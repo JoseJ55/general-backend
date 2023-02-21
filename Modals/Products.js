@@ -51,9 +51,9 @@ const Products = db.define(
 )
 
 // Products.associate = (models) => {
-    Products.belongsTo(Merchants, { foreignKey: 'merchant_id' });
-    Products.belongsTo(Manufacture, { foreignKey: 'manufacture_id' });
-    Products.hasOne(Categories, { foreignKey: 'category_id' });
+    // Products.belongsTo(Merchants, { foreignKey: 'merchant_id' });
+    // Products.belongsTo(Manufacture, { foreignKey: 'manufacture_id' });
+    // Products.hasOne(Categories, { foreignKey: 'category_id' });
 // }
 
 module.exports = Products;

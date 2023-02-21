@@ -30,8 +30,8 @@ const Manufactures = db.define(
     }
 )
 
-Manufactures.hasMany(Partnerships, { foreignKey: 'manufacture_id' });
-Manufactures.hasMany(Products, { foreignKey: 'manufacture_id' });
-Manufactures.hasOne(Address, { foreignKey: 'address_id' });
+// Manufactures.hasMany(Partnerships, { foreignKey: 'manufacture_id' });
+// Manufactures.hasMany(Products, { foreignKey: 'manufacture_id' });
+// Manufactures.hasOne(Address, { foreignKey: 'address_id' });
 
 module.exports = Manufactures;

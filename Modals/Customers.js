@@ -40,6 +40,6 @@ const Customers = db.define(
     }
 )
 
-Customers.hasOne(Address, { foreignKey: 'address_id' });
+// Customers.hasOne(Address, { foreignKey: 'address_id' });
 
 module.exports = Customers;
