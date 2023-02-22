@@ -7,7 +7,7 @@ const addressData = [
         county: 'county1',
         state: 'state1',
         city: 'city1',
-        zip: 'zip1'
+        zip: 12345
     },
     {
         address_id: 'custAdd2',
@@ -15,7 +15,7 @@ const addressData = [
         county: 'county2',
         state: 'state2',
         city: 'city2',
-        zip: 'zip2'
+        zip: 12345
     }, 
     {
         address_id: 'employAdd1',
@@ -23,7 +23,7 @@ const addressData = [
         county: 'county2',
         state: 'state2',
         city: 'city2',
-        zip: 'zip2'
+        zip: 12345
     },
     {
         address_id: 'employAdd2',
@@ -31,7 +31,7 @@ const addressData = [
         county: 'county2',
         state: 'state2',
         city: 'city2',
-        zip: 'zip2'
+        zip: 12345
     },
     {
         address_id: 'manuAdd1',
@@ -39,7 +39,7 @@ const addressData = [
         county: 'county2',
         state: 'state2',
         city: 'city2',
-        zip: 'zip2'
+        zip: 12345
     },
     {
         address_id: 'manuAdd2',
@@ -47,7 +47,7 @@ const addressData = [
         county: 'county2',
         state: 'state2',
         city: 'city2',
-        zip: 'zip2'
+        zip: 12345
     },
     {
         address_id: 'mer1',
@@ -55,7 +55,7 @@ const addressData = [
         county: 'county2',
         state: 'state2',
         city: 'city2',
-        zip: 'zip2'
+        zip: 12345
     },
     {
         address_id: 'mer2',
@@ -63,7 +63,7 @@ const addressData = [
         county: 'county2',
         state: 'state2',
         city: 'city2',
-        zip: 'zip2'
+        zip: 12345
     }
 ]
 

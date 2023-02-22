@@ -13,6 +13,7 @@ const sequelize = new Sequelize(
         define: {
             timestamps: false
         },
+        logging: false,
         pool: {
             max: 5,
             min: 0,
