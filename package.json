@@ -1,5 +1,5 @@
 {
-  "name": "general-backend", 
+  "name": "general-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "mysql2": "^3.1.2",
     "nodemon": "^2.0.20",
     "sequelize": "^6.28.0",
-    "sqlite3": "^5.1.4"
+    "sqlite3": "^5.1.4",
+    "uuid": "^9.0.0"
   }
 }
