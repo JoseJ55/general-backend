@@ -4,9 +4,9 @@ const { v4: uuidv4 } = require('uuid');
 const db = require('../../../config/connection');
 const Users = require('../../../Modals/Users')
 
-router.get('/users/', (req, res) => {
+router.get('/users/', async (req, res) => {
     try {
-        Users.findAll()
+        await Users.findAll()
         .then((users) => {
             res.json({
                 amount: users.length,
@@ -85,6 +85,23 @@ router.patch('/users/:user_id', (req, res) => {
     })
     .catch((err) => {
         res.status(401).json({ error: err })
+    })
+})
+
+router.delete('/users/:user_id', (req, res) => {
+    Users.findByPk(req.params.user_id)
+    .then((user) => {
+        if (user == null) throw 'user does not exist';
+
+        user.destroy()
+        .then((mes) => {
+            console.log(mes)
+            res.status(200).json({ message: 'deleted user' })
+        })
+    })
+    .catch((err) => {
+        console.log(err)
+        res.status(401).json({ error: err})
     })
 })
 

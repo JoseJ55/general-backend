@@ -9,7 +9,7 @@ require('dotenv').config();
 
 const routes = require('./routes');
 
-const PORT = 3000 || process.env.PORT;
+const PORT = 3333 || process.env.PORT;
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
