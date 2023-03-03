@@ -1,20 +1,13 @@
-const express = require('express');
 const cors = require('cors');
 // const handlebars = require('handlebars');
 
 const sequelize = require('./config/connection');
 
+const app = require('./app');
 
 require('dotenv').config();
 
-const routes = require('./routes');
-
-const PORT = 3333 || process.env.PORT;
-const app = express();
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(routes);
+const PORT = 3000 || process.env.PORT;
 
 sequelize.authenticate()
 .then(() => console.log('Database connected...'))

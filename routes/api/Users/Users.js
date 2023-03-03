@@ -54,8 +54,8 @@ router.post('/users/', (req, res) => {
             ]
         }
     )
-    .then(() => {
-        res.status(200).json({Message: 'user was added'});
+    .then((user) => {
+        res.status(200).json({user_id: user.dataValues.user_id});
     })
     .catch((err) => {
         if(err.errors[0].validatorKey === 'is_null') {
