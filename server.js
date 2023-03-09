@@ -1,8 +1,7 @@
-const cors = require('cors');
-// const handlebars = require('handlebars');
-
+// Getting config file for database
 const sequelize = require('./config/connection');
 
+// Initalizing the expresss app
 const app = require('./app');
 
 require('dotenv').config();
