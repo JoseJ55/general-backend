@@ -32,6 +32,8 @@
     --graph-lower-color: rgba(0, 194, 255, .53);
     --graph-main-color: rgba(0, 133, 255, 1);
     --graph-node-color: rgba(0, 133, 255, 1);
+
+    --main-font: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {

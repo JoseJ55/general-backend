@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
 const home = require('./Home');
-const login = require('/Login');
-const signup = requre('/Signup');
+const login = require('./Login');
+const signup = require('./Signup');
 
 router.use(home);
 router.use('/login', login);
