@@ -39,6 +39,14 @@
     min-height: 35vh;
 }
 
+#login-box-form-error {
+    width: 80%;
+    font-size: .9rem;
+    font-family: var(--main-font);
+    color: var(--error-message-color);
+    visibility: hidden;
+}
+
 .form-edit {
     width: 80%;
     padding: 2% 2%;

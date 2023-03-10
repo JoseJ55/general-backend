@@ -6,6 +6,7 @@
     --secondary-text-color: rgba(0, 0, 0, 1);
     --scroll-bar-color: rgba(255, 255, 255, 1);
     --link-color: rgb(73, 139, 224);
+    --error-message-color: rgb(255, 71, 71);
 
     /* These are for the request section of the page. */
     --request-get: rgba(143, 255, 54, 1);
