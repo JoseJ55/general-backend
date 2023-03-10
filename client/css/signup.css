@@ -10,7 +10,7 @@
 
 #signup-box {
     min-width: 40vw;
-    min-height: 60vh;
+    min-height: 65vh;
     background-color: var(--secondary-color);
     border-radius: 15px;
     overflow: hidden;
@@ -39,6 +39,14 @@
     min-height: 35vh;
 }
 
+#signup-box-form-error {
+    width: 80%;
+    font-size: .9rem;
+    font-family: var(--main-font);
+    color: var(--error-message-color);
+    visibility: hidden;
+}
+
 .form-edit {
     width: 80%;
     padding: 2% 2%;
@@ -48,6 +56,44 @@
     box-shadow: none;
     font-size: .9rem;
     font-family: var(--main-font);
+}
+
+#signup-box-form-passwordInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 82%;
+}
+
+#signup-box-form-passwordInfo-strength {
+    font-family: var(--main-font);
+    font-size: .9rem;
+    display: flex;
+    visibility: hidden;
+}
+
+#signup-box-form-passwordInfo-strength-normal {
+    color: var(--main-text-color);
+    margin-right: 1vw;
+}
+
+#signup-box-form-passwordInfo-strength-status {
+    color: red;
+}
+
+#signup-box-form-passwordInfo-show {
+    font-family: var(--main-font);
+    font-size: .9rem;
+    display: flex;
+}
+
+#signup-box-form-passwordInfo-show-text {
+    color: var(--main-text-color);
+    margin-right: 1vw;
+}
+
+#signup-box-form-passwordInfo-show {
+    padding: 1%
 }
 
 #signup-box-form-submit-button {
@@ -73,7 +119,7 @@
     justify-content: center;
     align-items: center;
     width: fit-content;
-    margin-top: 3vh;
+    margin-top: 2vh;
     color: var(--main-text-color);
 }
 

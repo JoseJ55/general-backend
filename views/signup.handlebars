@@ -5,13 +5,27 @@
         </div>
 
         <div id="signup-box-form">
-            <input class="form-edit" type="text" placeholder="Email" autocomplete="false"/>
+            <p id="signup-box-form-error">error</p>
 
-            <input class="form-edit" type="text" placeholder="Username" autocomplete="false"/>
+            <input class="form-edit" id="signup-box-form-email" type="text" placeholder="Email" autocomplete="false"/>
 
-            <input class="form-edit" type="password" placeholder="Password" autocomplete="false"/>
+            <input class="form-edit" id="signup-box-form-username" type="text" placeholder="Username" autocomplete="false"/>
 
-            <input class="form-edit" type="password" placeholder="Confirm Password" autocomplete="false"/>
+            <input class="form-edit" id="signup-box-form-password" type="password" placeholder="Password" autocomplete="false"/>
+
+            <input class="form-edit" id="signup-box-form-confirm" type="password" placeholder="Confirm Password" autocomplete="false"/>
+
+            <div id="signup-box-form-passwordInfo">
+                <div id="signup-box-form-passwordInfo-strength">
+                    <p id="signup-box-form-passwordInfo-strength-normal">Strength: </p>
+                    <p id="signup-box-form-passwordInfo-strength-status">Weak</p>
+                </div>
+
+                <div id="signup-box-form-passwordInfo-show">
+                    <p id="signup-box-form-passwordInfo-show-text">View Password</p>
+                    <input id="signup-box-form-passwordInfo-show" type="checkbox" />
+                </div>
+            </div>
 
             <input id="signup-box-form-submit-button" type="button" value="Sign Up" />
 
