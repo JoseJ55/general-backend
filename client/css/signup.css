@@ -1,0 +1,97 @@
+#signup-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    min-height: 100vh;
+    background: url('/assets/subtle-prism.svg');
+    overflow: hidden;
+}
+
+#signup-box {
+    min-width: 40vw;
+    min-height: 60vh;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px 3px;
+    animation: fadeIn 1s ease-in;
+}
+
+#signup-box-title {
+    width: 100%;
+    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-color);
+    color: var(--main-text-color);
+    font-family: var(--main-font);
+}
+
+#signup-box-form {
+    margin: 3vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 35vh;
+}
+
+.form-edit {
+    width: 80%;
+    padding: 2% 2%;
+    margin: 1%;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: .9rem;
+    font-family: var(--main-font);
+}
+
+#signup-box-form-submit-button {
+    width: 84%;
+    padding: 1% 2%;
+    margin: 3% 1%;
+    color: var(--secondary-text-color);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: .9rem;
+    font-family: var(--main-font);
+}
+
+#signup-box-form-submit-button:hover {
+    cursor: pointer;
+    background-color: #888;
+    color: white;
+}
+
+#signup-box-form-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-top: 3vh;
+    color: var(--main-text-color);
+}
+
+#signup-box-form-login p {
+    margin-right: 1vw;
+    font-size: .9rem;
+    font-family: var(--main-font);
+}
+
+#signup-box-form-login-button {
+    background-color: transparent;
+    border: none;
+    color: var(--main-text-color);
+    font-size: .9rem;
+    font-family: var(--main-font);
+}
+
+#signup-box-form-login-button:hover {
+    cursor: pointer;
+    color: var(--link-color);
+}
