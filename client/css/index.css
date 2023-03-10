@@ -5,6 +5,7 @@
     --main-text-color: rgba(255, 255, 255, 1);
     --secondary-text-color: rgba(0, 0, 0, 1);
     --scroll-bar-color: rgba(255, 255, 255, 1);
+    --link-color: rgb(73, 139, 224);
 
     /* These are for the request section of the page. */
     --request-get: rgba(143, 255, 54, 1);
@@ -45,4 +46,16 @@ body {
     background-color: var(--main-background-color);
     overflow-x: hidden;
     max-width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        position: relative;
+        top: 30vh;
+    } to {
+        opacity: 1;
+        position: relative;
+        top: 0;
+    }
 }
